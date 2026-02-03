@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Bel_Prog
 {
-    public partial class Controls : Form
+    public partial class ControlsForm : Form
     {
-        public Controls()
+        public ControlsForm()
         {
             InitializeComponent();
         }
