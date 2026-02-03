@@ -37,5 +37,12 @@ namespace Bel_Prog
                 e.Cancel = true;
             }
         }
+
+        private void BtnOpen_Click(object sender, EventArgs e)
+        {
+            Controls window = new Controls();
+            window.Show();
+            this.Hide();
+        }
     }
 }

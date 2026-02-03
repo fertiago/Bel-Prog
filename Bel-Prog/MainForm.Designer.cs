@@ -31,6 +31,7 @@
             BtnSwap = new Button();
             PictureRight = new PictureBox();
             PictureLeft = new PictureBox();
+            BtnOpen = new Button();
             ((System.ComponentModel.ISupportInitialize)PictureRight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PictureLeft).BeginInit();
             SuspendLayout();
@@ -65,12 +66,23 @@
             PictureLeft.TabIndex = 2;
             PictureLeft.TabStop = false;
             // 
+            // BtnOpen
+            // 
+            BtnOpen.Location = new Point(327, 337);
+            BtnOpen.Name = "BtnOpen";
+            BtnOpen.Size = new Size(146, 75);
+            BtnOpen.TabIndex = 3;
+            BtnOpen.Text = "OPEN";
+            BtnOpen.UseVisualStyleBackColor = true;
+            BtnOpen.Click += BtnOpen_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(800, 480);
+            Controls.Add(BtnOpen);
             Controls.Add(PictureLeft);
             Controls.Add(PictureRight);
             Controls.Add(BtnSwap);
@@ -90,5 +102,6 @@
         private Button BtnSwap;
         private PictureBox PictureRight;
         private PictureBox PictureLeft;
+        private Button BtnOpen;
     }
 }
