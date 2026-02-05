@@ -42,7 +42,6 @@ namespace Bel_Prog
         {
             Controls window = new Controls();
             window.Show();
-            this.Hide();
         }
     }
 }

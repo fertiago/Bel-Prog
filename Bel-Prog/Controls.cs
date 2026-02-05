@@ -14,5 +14,10 @@ namespace Bel_Prog
         {
             InitializeComponent();
         }
+
+        private void quiterStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
