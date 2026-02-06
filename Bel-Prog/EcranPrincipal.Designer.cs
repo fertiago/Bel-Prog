@@ -1,6 +1,6 @@
 ﻿namespace Bel_Prog
 {
-    partial class Controls
+    partial class EcranPrincipal
     {
         /// <summary>
         /// Required designer variable.

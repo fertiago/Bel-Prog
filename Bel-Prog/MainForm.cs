@@ -40,7 +40,7 @@ namespace Bel_Prog
 
         private void BtnOpen_Click(object sender, EventArgs e)
         {
-            ControlsForm window = new ControlsForm();
+            EcranPrincipal window = new EcranPrincipal();
             window.Show();
         }
     }
