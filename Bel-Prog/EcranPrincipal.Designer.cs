@@ -100,6 +100,7 @@
             aProposStripMenuItem.Name = "aProposStripMenuItem";
             aProposStripMenuItem.Size = new Size(180, 22);
             aProposStripMenuItem.Text = "A Propos";
+            aProposStripMenuItem.Click += new System.EventHandler(this.aProposStripMenuItem_Click);
             // 
             // aideStripMenuItem
             // 

@@ -19,5 +19,11 @@ namespace Bel_Prog
         {
             this.Close();
         }
+
+        private void aProposStripMenuItem_Click(object sender, EventArgs e)
+        {
+            APropos window = new APropos();
+            window.Show();
+        }
     }
 }
