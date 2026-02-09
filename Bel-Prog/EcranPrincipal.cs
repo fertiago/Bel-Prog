@@ -25,5 +25,11 @@ namespace Bel_Prog
             APropos window = new APropos();
             window.Show();
         }
+
+        private void barreDeProgressionStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EcranProgression window = new EcranProgression();
+            window.Show();
+        }
     }
 }

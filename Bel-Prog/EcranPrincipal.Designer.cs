@@ -74,6 +74,7 @@
             barreDeProgressionStripMenuItem.Name = "barreDeProgressionStripMenuItem";
             barreDeProgressionStripMenuItem.Size = new Size(182, 22);
             barreDeProgressionStripMenuItem.Text = "barre de progression";
+            barreDeProgressionStripMenuItem.Click += new System.EventHandler(this.barreDeProgressionStripMenuItem_Click);   
             // 
             // splitStripMenuItem
             // 
