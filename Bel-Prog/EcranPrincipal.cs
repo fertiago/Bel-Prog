@@ -31,5 +31,11 @@ namespace Bel_Prog
             EcranProgression window = new EcranProgression();
             window.Show();
         }
+
+        private void listesStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManipulationListe window = new ManipulationListe();
+            window.Show();
+        }
     }
 }

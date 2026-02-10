@@ -68,6 +68,7 @@
             listesStripMenuItem.Name = "listesStripMenuItem";
             listesStripMenuItem.Size = new Size(182, 22);
             listesStripMenuItem.Text = "Listes";
+            listesStripMenuItem.Click += new System.EventHandler(this.listesStripMenuItem_Click);
             // 
             // barreDeProgressionStripMenuItem
             // 
