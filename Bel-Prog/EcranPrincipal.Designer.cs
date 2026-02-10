@@ -86,7 +86,7 @@
             // 
             quiterStripMenuItem.Name = "quiterStripMenuItem";
             quiterStripMenuItem.Size = new Size(182, 22);
-            quiterStripMenuItem.Text = "Quiter (CRTL + Q)";
+            quiterStripMenuItem.Text = "Quiter";
             quiterStripMenuItem.Click += new System.EventHandler(this.quiterStripMenuItem_Click);
             quiterStripMenuItem.ShortcutKeys = Keys.Control | Keys.Q;
             // 
