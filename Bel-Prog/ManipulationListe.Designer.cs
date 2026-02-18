@@ -73,6 +73,9 @@
             listBox.Name = "listBox";
             listBox.Size = new Size(280, 109);
             listBox.TabIndex = 1;
+            listBox.Sorted = true;
+            listBox.SelectedIndexChanged += new EventHandler(listBox_SelectedIndexChanged);
+            listBox.MouseDoubleClick += new MouseEventHandler(listBox_MouseDoubleClick);
             // 
             // openListButton
             // 

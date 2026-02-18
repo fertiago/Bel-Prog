@@ -11,12 +11,14 @@ namespace Bel_Prog
         public int Id { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
+        public int SecretNumber { get; set; }
 
-        public Element(int id, string title, string name)
+        public Element(int id, string title, string name, int secretNumber)
         {
             Id = id;
             Title = title;
             Name = name;
+            SecretNumber = secretNumber;
         }
 
         public override string ToString()
@@ -31,9 +33,9 @@ namespace Bel_Prog
 
         private int _nextId = 1;
 
-        public int Add(string title, string name)
+        public int Add(string title, string name, int secretNumber)
         {
-            var newElement = new Element(_nextId, title, name);
+            var newElement = new Element(_nextId, title, name, secretNumber);
             _list.Add(newElement);
             _nextId++;
             return newElement.Id;
@@ -83,11 +85,11 @@ namespace Bel_Prog
         {
             using (StreamWriter sw = new StreamWriter(pathFile, false, Encoding.UTF8))
             {
-                sw.WriteLine("Id;Qualite;Nom");
+                sw.WriteLine("Id;Qualite;Nom;SecretNumber");
 
                 foreach (Element element in _list)
                 {
-                    sw.WriteLine($"{element.Id};{element.Title};{element.Name}");
+                    sw.WriteLine($"{element.Id};{element.Title};{element.Name};{element.SecretNumber}");
                 }
             }
         }
@@ -105,13 +107,14 @@ namespace Bel_Prog
                 if (string.IsNullOrWhiteSpace(ligne)) continue;
 
                 string[] colonnes = ligne.Split(';');
-                if (colonnes.Length >= 3)
+                if (colonnes.Length >= 4)
                 {
                     int id = int.Parse(colonnes[0]);
                     string titre = colonnes[1];
                     string nom = colonnes[2];
+                    int secretNumber = int.Parse(colonnes[3]);
 
-                    Element nouvelElement = new Element(id, titre, nom);
+                    Element nouvelElement = new Element(id, titre, nom, secretNumber);
                     _list.Add(nouvelElement);
                 }
             }
