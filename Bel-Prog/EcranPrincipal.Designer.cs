@@ -55,6 +55,7 @@
             editeurStripMenuItem.Name = "editeurStripMenuItem";
             editeurStripMenuItem.Size = new Size(180, 22);
             editeurStripMenuItem.Text = "Editeur";
+            editeurStripMenuItem.Click += new System.EventHandler(this.editeurStripMenuItem_Click);
             // 
             // applicationsStripMenuItem
             // 

@@ -37,5 +37,11 @@ namespace Bel_Prog
             ManipulationListe window = new ManipulationListe();
             window.Show();
         }
+
+        private void editeurStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Editeur window = new Editeur();
+            window.Show();
+        }
     }
 }
