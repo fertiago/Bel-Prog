@@ -86,6 +86,7 @@
             nouveauMenuItem.Size = new Size(130, 22);
             nouveauMenuItem.Text = "Nouveau";
             nouveauMenuItem.Click += new System.EventHandler(this.nouveau_Click);
+            nouveauMenuItem.ShortcutKeys = Keys.Control | Keys.N;
             // 
             // ouvrirMenuItem
             // 
@@ -93,6 +94,7 @@
             ouvrirMenuItem.Size = new Size(130, 22);
             ouvrirMenuItem.Text = "Ouvrir";
             ouvrirMenuItem.Click += new System.EventHandler(this.ouvrir_Click);
+            ouvrirMenuItem.ShortcutKeys = Keys.Control | Keys.O;
             // 
             // enregistrerMenuItem
             // 
@@ -100,6 +102,7 @@
             enregistrerMenuItem.Size = new Size(130, 22);
             enregistrerMenuItem.Text = "Enregistrer";
             enregistrerMenuItem.Click += new System.EventHandler(this.enregistrer_Click);
+            enregistrerMenuItem.ShortcutKeys = Keys.Control | Keys.S;
             // 
             // quitterMenuItem
             // 
@@ -107,6 +110,7 @@
             quitterMenuItem.Size = new Size(130, 22);
             quitterMenuItem.Text = "Quitter";
             quitterMenuItem.Click += new System.EventHandler(this.quitter_Click);
+            quitterMenuItem.ShortcutKeys = Keys.Control | Keys.Q;
             // 
             // editerMenuItem
             // 
@@ -121,6 +125,7 @@
             copierMenuItem.Size = new Size(113, 22);
             copierMenuItem.Text = "Copier";
             copierMenuItem.Click += new System.EventHandler(this.copier_Click);
+            copierMenuItem.ShortcutKeys = Keys.Control | Keys.C;
             // 
             // collerMenuItem
             // 
@@ -128,6 +133,7 @@
             collerMenuItem.Size = new Size(113, 22);
             collerMenuItem.Text = "Couper";
             collerMenuItem.Click += new System.EventHandler(this.coller_Click);
+            collerMenuItem.ShortcutKeys = Keys.Control | Keys.V;
             // 
             // couperMenuItem
             // 
@@ -135,6 +141,7 @@
             couperMenuItem.Size = new Size(113, 22);
             couperMenuItem.Text = "Coller";
             couperMenuItem.Click += new System.EventHandler(this.couper_Click);
+            couperMenuItem.ShortcutKeys = Keys.Control | Keys.X;
             // 
             // formatMenuItem
             // 
@@ -189,24 +196,28 @@
             grasMenuItem.Name = "grasMenuItem";
             grasMenuItem.Size = new Size(120, 22);
             grasMenuItem.Text = "Gras";
+            grasMenuItem.Click += new System.EventHandler(this.gras_Click);
             // 
             // italiqueMenuItem
             // 
             italiqueMenuItem.Name = "italiqueMenuItem";
             italiqueMenuItem.Size = new Size(120, 22);
             italiqueMenuItem.Text = "Italique";
+            italiqueMenuItem.Click += new System.EventHandler(this.italique_Click);
             // 
             // souligneMenuItem
             // 
             souligneMenuItem.Name = "souligneMenuItem";
             souligneMenuItem.Size = new Size(120, 22);
             souligneMenuItem.Text = "Souligne";
+            souligneMenuItem.Click += new System.EventHandler(this.souligne_Click);
             // 
             // barreMenuItem
             // 
             barreMenuItem.Name = "barreMenuItem";
             barreMenuItem.Size = new Size(120, 22);
             barreMenuItem.Text = "Barre";
+            barreMenuItem.Click += new System.EventHandler(this.barre_Click);
             // 
             // panel
             // 
@@ -267,6 +278,7 @@
             richText.Size = new Size(302, 383);
             richText.TabIndex = 6;
             richText.Text = "";
+            richText.TextChanged += new EventHandler(this.richText_TextChanged);
             // 
             // Editeur
             // 
