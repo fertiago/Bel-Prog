@@ -57,5 +57,11 @@ namespace Bel_Prog
             windows.Show();
         }
 
+        private void clavierSourisMenuItem_Click(object sender, EventArgs e)
+        {
+            ClavierSouris windows = new ClavierSouris();
+            windows.Show();
+        }
+
     }
 }

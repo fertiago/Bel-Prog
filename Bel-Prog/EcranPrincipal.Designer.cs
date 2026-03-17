@@ -40,6 +40,7 @@
             horlogeStripMenuItem = new ToolStripMenuItem();
             aideStripMenuItem = new ToolStripMenuItem();
             aProposStripMenuItem = new ToolStripMenuItem();
+            clavierSourisMenuItem = new ToolStripMenuItem();
             menuStripTopBar.SuspendLayout();
             SuspendLayout();
             // 
@@ -88,7 +89,7 @@
             // 
             // applicationsStripMenuItem
             // 
-            applicationsStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { editeurStripMenuItem, spirographeStripMenuItem, horlogeStripMenuItem });
+            applicationsStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { editeurStripMenuItem, spirographeStripMenuItem, horlogeStripMenuItem, clavierSourisMenuItem });
             applicationsStripMenuItem.Name = "applicationsStripMenuItem";
             applicationsStripMenuItem.Size = new Size(85, 20);
             applicationsStripMenuItem.Text = "Applications";
@@ -112,7 +113,7 @@
             horlogeStripMenuItem.Name = "horlogeStripMenuItem";
             horlogeStripMenuItem.Size = new Size(180, 22);
             horlogeStripMenuItem.Text = "Horloge";
-            horlogeStripMenuItem.Click += new System.EventHandler(this.horlogeStripMenuItem_Click);
+            horlogeStripMenuItem.Click += horlogeStripMenuItem_Click;
             // 
             // aideStripMenuItem
             // 
@@ -127,6 +128,13 @@
             aProposStripMenuItem.Size = new Size(122, 22);
             aProposStripMenuItem.Text = "A Propos";
             aProposStripMenuItem.Click += aProposStripMenuItem_Click;
+            // 
+            // clavierSourisMenuItem
+            // 
+            clavierSourisMenuItem.Name = "clavierSourisMenuItem";
+            clavierSourisMenuItem.Size = new Size(180, 22);
+            clavierSourisMenuItem.Text = "ClavierSouris";
+            clavierSourisMenuItem.Click += clavierSourisMenuItem_Click;
             // 
             // EcranPrincipal
             // 
@@ -157,5 +165,6 @@
         private ToolStripMenuItem aProposStripMenuItem;
         private ToolStripMenuItem spirographeStripMenuItem;
         private ToolStripMenuItem horlogeStripMenuItem;
+        private ToolStripMenuItem clavierSourisMenuItem;
     }
 }

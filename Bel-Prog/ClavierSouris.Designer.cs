@@ -28,141 +28,167 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel = new Panel();
-            clavierListBox = new ListBox();
-            interceptionLabel = new Label();
-            clicGaucheLabel = new Label();
-            clicDroitLabel = new Label();
-            positionXLabel = new Label();
-            positionYLabel = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            SuspendLayout();
+            this.panel = new System.Windows.Forms.Panel();
+            this.clavierListBox = new System.Windows.Forms.ListBox();
+            this.interceptionLabel = new System.Windows.Forms.Label();
+            this.clicGaucheLabel = new System.Windows.Forms.Label();
+            this.clicDroitLabel = new System.Windows.Forms.Label();
+            this.positionXLabel = new System.Windows.Forms.Label();
+            this.positionYLabel = new System.Windows.Forms.Label();
+            this.leftClickTextBox = new System.Windows.Forms.TextBox();
+            this.rightClickTextBox = new System.Windows.Forms.TextBox();
+            this.XTextBox = new System.Windows.Forms.TextBox();
+            this.YTextBox = new System.Windows.Forms.TextBox();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // panel
             // 
-            panel.Location = new Point(237, 106);
-            panel.Name = "panel";
-            panel.Size = new Size(466, 321);
-            panel.TabIndex = 0;
+            this.panel.BackColor = System.Drawing.Color.White;
+            this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel.Location = new System.Drawing.Point(237, 106);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(466, 321);
+            this.panel.TabIndex = 0;
+            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
+            this.panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MouseDown);
+            this.panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_MouseMove);
             // 
             // clavierListBox
             // 
-            clavierListBox.FormattingEnabled = true;
-            clavierListBox.Location = new Point(12, 27);
-            clavierListBox.Name = "clavierListBox";
-            clavierListBox.Size = new Size(191, 364);
-            clavierListBox.TabIndex = 1;
+            this.clavierListBox.FormattingEnabled = true;
+            this.clavierListBox.ItemHeight = 15;
+            this.clavierListBox.Location = new System.Drawing.Point(12, 27);
+            this.clavierListBox.Name = "clavierListBox";
+            this.clavierListBox.Size = new System.Drawing.Size(191, 364);
+            this.clavierListBox.TabIndex = 1;
             // 
             // interceptionLabel
             // 
-            interceptionLabel.AutoSize = true;
-            interceptionLabel.Location = new Point(79, 9);
-            interceptionLabel.Name = "interceptionLabel";
-            interceptionLabel.Size = new Size(71, 15);
-            interceptionLabel.TabIndex = 2;
-            interceptionLabel.Text = "Interception";
+            this.interceptionLabel.AutoSize = true;
+            this.interceptionLabel.Location = new System.Drawing.Point(12, 9);
+            this.interceptionLabel.Name = "interceptionLabel";
+            this.interceptionLabel.Size = new System.Drawing.Size(109, 15);
+            this.interceptionLabel.TabIndex = 2;
+            this.interceptionLabel.Text = "Interception clavier";
             // 
             // clicGaucheLabel
             // 
-            clicGaucheLabel.AutoSize = true;
-            clicGaucheLabel.Location = new Point(237, 27);
-            clicGaucheLabel.Name = "clicGaucheLabel";
-            clicGaucheLabel.Size = new Size(69, 15);
-            clicGaucheLabel.TabIndex = 3;
-            clicGaucheLabel.Text = "Clic gauche";
+            this.clicGaucheLabel.AutoSize = true;
+            this.clicGaucheLabel.Location = new System.Drawing.Point(237, 27);
+            this.clicGaucheLabel.Name = "clicGaucheLabel";
+            this.clicGaucheLabel.Size = new System.Drawing.Size(69, 15);
+            this.clicGaucheLabel.TabIndex = 3;
+            this.clicGaucheLabel.Text = "Clic gauche";
             // 
             // clicDroitLabel
             // 
-            clicDroitLabel.AutoSize = true;
-            clicDroitLabel.Location = new Point(325, 27);
-            clicDroitLabel.Name = "clicDroitLabel";
-            clicDroitLabel.Size = new Size(56, 15);
-            clicDroitLabel.TabIndex = 4;
-            clicDroitLabel.Text = "Clic Droit";
+            this.clicDroitLabel.AutoSize = true;
+            this.clicDroitLabel.Location = new System.Drawing.Point(325, 27);
+            this.clicDroitLabel.Name = "clicDroitLabel";
+            this.clicDroitLabel.Size = new System.Drawing.Size(56, 15);
+            this.clicDroitLabel.TabIndex = 4;
+            this.clicDroitLabel.Text = "Clic Droit";
             // 
             // positionXLabel
             // 
-            positionXLabel.AutoSize = true;
-            positionXLabel.Location = new Point(414, 27);
-            positionXLabel.Name = "positionXLabel";
-            positionXLabel.Size = new Size(60, 15);
-            positionXLabel.TabIndex = 5;
-            positionXLabel.Text = "Position X";
+            this.positionXLabel.AutoSize = true;
+            this.positionXLabel.Location = new System.Drawing.Point(414, 27);
+            this.positionXLabel.Name = "positionXLabel";
+            this.positionXLabel.Size = new System.Drawing.Size(60, 15);
+            this.positionXLabel.TabIndex = 5;
+            this.positionXLabel.Text = "Position X";
             // 
             // positionYLabel
             // 
-            positionYLabel.AutoSize = true;
-            positionYLabel.Location = new Point(508, 27);
-            positionYLabel.Name = "positionYLabel";
-            positionYLabel.Size = new Size(60, 15);
-            positionYLabel.TabIndex = 6;
-            positionYLabel.Text = "Position Y";
+            this.positionYLabel.AutoSize = true;
+            this.positionYLabel.Location = new System.Drawing.Point(508, 27);
+            this.positionYLabel.Name = "positionYLabel";
+            this.positionYLabel.Size = new System.Drawing.Size(60, 15);
+            this.positionYLabel.TabIndex = 6;
+            this.positionYLabel.Text = "Position Y";
             // 
-            // textBox1
+            // leftClickTextBox
             // 
-            textBox1.Location = new Point(237, 56);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(69, 23);
-            textBox1.TabIndex = 7;
+            this.leftClickTextBox.Location = new System.Drawing.Point(237, 56);
+            this.leftClickTextBox.Name = "leftClickTextBox";
+            this.leftClickTextBox.ReadOnly = true;
+            this.leftClickTextBox.Size = new System.Drawing.Size(69, 23);
+            this.leftClickTextBox.TabIndex = 7;
             // 
-            // textBox2
+            // rightClickTextBox
             // 
-            textBox2.Location = new Point(325, 56);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(69, 23);
-            textBox2.TabIndex = 8;
+            this.rightClickTextBox.Location = new System.Drawing.Point(325, 56);
+            this.rightClickTextBox.Name = "rightClickTextBox";
+            this.rightClickTextBox.ReadOnly = true;
+            this.rightClickTextBox.Size = new System.Drawing.Size(69, 23);
+            this.rightClickTextBox.TabIndex = 8;
             // 
-            // textBox3
+            // XTextBox
             // 
-            textBox3.Location = new Point(414, 56);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(69, 23);
-            textBox3.TabIndex = 9;
+            this.XTextBox.Location = new System.Drawing.Point(414, 56);
+            this.XTextBox.Name = "XTextBox";
+            this.XTextBox.ReadOnly = true;
+            this.XTextBox.Size = new System.Drawing.Size(69, 23);
+            this.XTextBox.TabIndex = 9;
             // 
-            // textBox4
+            // YTextBox
             // 
-            textBox4.Location = new Point(508, 56);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(69, 23);
-            textBox4.TabIndex = 10;
+            this.YTextBox.Location = new System.Drawing.Point(508, 56);
+            this.YTextBox.Name = "YTextBox";
+            this.YTextBox.ReadOnly = true;
+            this.YTextBox.Size = new System.Drawing.Size(69, 23);
+            this.YTextBox.TabIndex = 10;
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(601, 56);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(102, 23);
+            this.resetButton.TabIndex = 11;
+            this.resetButton.Text = "Remise à zéro";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // ClavierSouris
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(positionYLabel);
-            Controls.Add(positionXLabel);
-            Controls.Add(clicDroitLabel);
-            Controls.Add(clicGaucheLabel);
-            Controls.Add(interceptionLabel);
-            Controls.Add(clavierListBox);
-            Controls.Add(panel);
-            Name = "ClavierSouris";
-            Text = "ClavierSouris";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(730, 450);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.YTextBox);
+            this.Controls.Add(this.XTextBox);
+            this.Controls.Add(this.rightClickTextBox);
+            this.Controls.Add(this.leftClickTextBox);
+            this.Controls.Add(this.positionYLabel);
+            this.Controls.Add(this.positionXLabel);
+            this.Controls.Add(this.clicDroitLabel);
+            this.Controls.Add(this.clicGaucheLabel);
+            this.Controls.Add(this.interceptionLabel);
+            this.Controls.Add(this.clavierListBox);
+            this.Controls.Add(this.panel);
+            this.Name = "ClavierSouris";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ClavierSouris_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClavierSouris_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ClavierSouris_KeyUp);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Panel panel;
-        private ListBox clavierListBox;
-        private Label interceptionLabel;
-        private Label clicGaucheLabel;
-        private Label clicDroitLabel;
-        private Label positionXLabel;
-        private Label positionYLabel;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.ListBox clavierListBox;
+        private System.Windows.Forms.Label interceptionLabel;
+        private System.Windows.Forms.Label clicGaucheLabel;
+        private System.Windows.Forms.Label clicDroitLabel;
+        private System.Windows.Forms.Label positionXLabel;
+        private System.Windows.Forms.Label positionYLabel;
+        private System.Windows.Forms.TextBox leftClickTextBox;
+        private System.Windows.Forms.TextBox rightClickTextBox;
+        private System.Windows.Forms.TextBox XTextBox;
+        private System.Windows.Forms.TextBox YTextBox;
+        private System.Windows.Forms.Button resetButton;
     }
 }
