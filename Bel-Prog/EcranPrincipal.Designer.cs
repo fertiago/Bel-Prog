@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             menuStripTopBar = new MenuStrip();
-            editeurStripMenuItem = new ToolStripMenuItem();
-            applicationsStripMenuItem = new ToolStripMenuItem();
+            controlesStripMenuItem = new ToolStripMenuItem();
             listesStripMenuItem = new ToolStripMenuItem();
             barreDeProgressionStripMenuItem = new ToolStripMenuItem();
             splitStripMenuItem = new ToolStripSeparator();
             quiterStripMenuItem = new ToolStripMenuItem();
-            controlesStripMenuItem = new ToolStripMenuItem();
-            aProposStripMenuItem = new ToolStripMenuItem();
+            applicationsStripMenuItem = new ToolStripMenuItem();
+            editeurStripMenuItem = new ToolStripMenuItem();
+            spirographeStripMenuItem = new ToolStripMenuItem();
+            horlogeStripMenuItem = new ToolStripMenuItem();
             aideStripMenuItem = new ToolStripMenuItem();
+            aProposStripMenuItem = new ToolStripMenuItem();
             menuStripTopBar.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,33 +52,26 @@
             menuStripTopBar.TabIndex = 0;
             menuStripTopBar.Text = "menuStripTopBar";
             // 
-            // editeurStripMenuItem
+            // controlesStripMenuItem
             // 
-            editeurStripMenuItem.Name = "editeurStripMenuItem";
-            editeurStripMenuItem.Size = new Size(180, 22);
-            editeurStripMenuItem.Text = "Editeur";
-            editeurStripMenuItem.Click += new System.EventHandler(this.editeurStripMenuItem_Click);
-            // 
-            // applicationsStripMenuItem
-            // 
-            applicationsStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { editeurStripMenuItem });
-            applicationsStripMenuItem.Name = "applicationsStripMenuItem";
-            applicationsStripMenuItem.Size = new Size(85, 20);
-            applicationsStripMenuItem.Text = "Applications";
+            controlesStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listesStripMenuItem, barreDeProgressionStripMenuItem, splitStripMenuItem, quiterStripMenuItem });
+            controlesStripMenuItem.Name = "controlesStripMenuItem";
+            controlesStripMenuItem.Size = new Size(70, 20);
+            controlesStripMenuItem.Text = "Controles";
             // 
             // listesStripMenuItem
             // 
             listesStripMenuItem.Name = "listesStripMenuItem";
             listesStripMenuItem.Size = new Size(182, 22);
             listesStripMenuItem.Text = "Listes";
-            listesStripMenuItem.Click += new System.EventHandler(this.listesStripMenuItem_Click);
+            listesStripMenuItem.Click += listesStripMenuItem_Click;
             // 
             // barreDeProgressionStripMenuItem
             // 
             barreDeProgressionStripMenuItem.Name = "barreDeProgressionStripMenuItem";
             barreDeProgressionStripMenuItem.Size = new Size(182, 22);
             barreDeProgressionStripMenuItem.Text = "barre de progression";
-            barreDeProgressionStripMenuItem.Click += new System.EventHandler(this.barreDeProgressionStripMenuItem_Click);   
+            barreDeProgressionStripMenuItem.Click += barreDeProgressionStripMenuItem_Click;
             // 
             // splitStripMenuItem
             // 
@@ -86,24 +81,38 @@
             // quiterStripMenuItem
             // 
             quiterStripMenuItem.Name = "quiterStripMenuItem";
+            quiterStripMenuItem.ShortcutKeys = Keys.Control | Keys.Q;
             quiterStripMenuItem.Size = new Size(182, 22);
             quiterStripMenuItem.Text = "Quiter";
-            quiterStripMenuItem.Click += new System.EventHandler(this.quiterStripMenuItem_Click);
-            quiterStripMenuItem.ShortcutKeys = Keys.Control | Keys.Q;
+            quiterStripMenuItem.Click += quiterStripMenuItem_Click;
             // 
-            // controlesStripMenuItem
+            // applicationsStripMenuItem
             // 
-            controlesStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listesStripMenuItem, barreDeProgressionStripMenuItem, splitStripMenuItem, quiterStripMenuItem });
-            controlesStripMenuItem.Name = "controlesStripMenuItem";
-            controlesStripMenuItem.Size = new Size(70, 20);
-            controlesStripMenuItem.Text = "Controles";
+            applicationsStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { editeurStripMenuItem, spirographeStripMenuItem, horlogeStripMenuItem });
+            applicationsStripMenuItem.Name = "applicationsStripMenuItem";
+            applicationsStripMenuItem.Size = new Size(85, 20);
+            applicationsStripMenuItem.Text = "Applications";
             // 
-            // aProposStripMenuItem
+            // editeurStripMenuItem
             // 
-            aProposStripMenuItem.Name = "aProposStripMenuItem";
-            aProposStripMenuItem.Size = new Size(180, 22);
-            aProposStripMenuItem.Text = "A Propos";
-            aProposStripMenuItem.Click += new System.EventHandler(this.aProposStripMenuItem_Click);
+            editeurStripMenuItem.Name = "editeurStripMenuItem";
+            editeurStripMenuItem.Size = new Size(180, 22);
+            editeurStripMenuItem.Text = "Editeur";
+            editeurStripMenuItem.Click += editeurStripMenuItem_Click;
+            // 
+            // spirographeStripMenuItem
+            // 
+            spirographeStripMenuItem.Name = "spirographeStripMenuItem";
+            spirographeStripMenuItem.Size = new Size(180, 22);
+            spirographeStripMenuItem.Text = "Spirographe";
+            spirographeStripMenuItem.Click += spirographeStripMenuItem_Click;
+            // 
+            // horlogeStripMenuItem
+            // 
+            horlogeStripMenuItem.Name = "horlogeStripMenuItem";
+            horlogeStripMenuItem.Size = new Size(180, 22);
+            horlogeStripMenuItem.Text = "Horloge";
+            horlogeStripMenuItem.Click += new System.EventHandler(this.horlogeStripMenuItem_Click);
             // 
             // aideStripMenuItem
             // 
@@ -112,14 +121,21 @@
             aideStripMenuItem.Size = new Size(43, 20);
             aideStripMenuItem.Text = "Aide";
             // 
-            // Controls
+            // aProposStripMenuItem
+            // 
+            aProposStripMenuItem.Name = "aProposStripMenuItem";
+            aProposStripMenuItem.Size = new Size(122, 22);
+            aProposStripMenuItem.Text = "A Propos";
+            aProposStripMenuItem.Click += aProposStripMenuItem_Click;
+            // 
+            // EcranPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(menuStripTopBar);
             MainMenuStrip = menuStripTopBar;
-            Name = "Controls";
+            Name = "EcranPrincipal";
             Text = "Controls";
             menuStripTopBar.ResumeLayout(false);
             menuStripTopBar.PerformLayout();
@@ -139,5 +155,7 @@
         private ToolStripMenuItem editeurStripMenuItem;
         private ToolStripMenuItem aideStripMenuItem;
         private ToolStripMenuItem aProposStripMenuItem;
+        private ToolStripMenuItem spirographeStripMenuItem;
+        private ToolStripMenuItem horlogeStripMenuItem;
     }
 }

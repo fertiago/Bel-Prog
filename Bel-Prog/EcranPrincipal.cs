@@ -43,5 +43,19 @@ namespace Bel_Prog
             Editeur window = new Editeur();
             window.Show();
         }
+
+        private void spirographeStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Spirographe window = new Spirographe();
+            window.Show();
+        }
+
+
+        private void horlogeStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Horloge windows = new Horloge();
+            windows.Show();
+        }
+
     }
 }
