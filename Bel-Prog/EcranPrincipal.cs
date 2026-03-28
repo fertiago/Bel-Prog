@@ -63,5 +63,11 @@ namespace Bel_Prog
             windows.Show();
         }
 
+        private void baseDeDonneeStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EcranDbDirect windows = new EcranDbDirect();
+            windows.Show();
+        }    
+
     }
 }
