@@ -46,6 +46,8 @@
             motdepasseTextBox = new TextBox();
             dbGroupBox = new GroupBox();
             connectionButton = new Button();
+            textBox1 = new TextBox();
+            baseDeDonneeTextBox = new Label();
             dbGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,6 +67,7 @@
             consulterButton.TabIndex = 1;
             consulterButton.Text = "Consulter";
             consulterButton.UseVisualStyleBackColor = true;
+            consulterButton.Click += new System.EventHandler(consulterButton_Click);
             // 
             // denombrerButton
             // 
@@ -74,6 +77,7 @@
             denombrerButton.TabIndex = 2;
             denombrerButton.Text = "Denombrer";
             denombrerButton.UseVisualStyleBackColor = true;
+            denombrerButton.Click += new System.EventHandler(denombrerButton_Click);
             // 
             // ajouterButton
             // 
@@ -83,6 +87,7 @@
             ajouterButton.TabIndex = 3;
             ajouterButton.Text = "Ajouter";
             ajouterButton.UseVisualStyleBackColor = true;
+            ajouterButton.Click += new System.EventHandler(ajouterButton_Click);
             // 
             // nomTextBox
             // 
@@ -115,7 +120,6 @@
             prenomLabel.Size = new Size(60, 20);
             prenomLabel.TabIndex = 7;
             prenomLabel.Text = "Prenom";
-            prenomLabel.Click += prenomLabel_Click;
             // 
             // urlLabel
             // 
@@ -134,12 +138,11 @@
             portLabel.Size = new Size(35, 20);
             portLabel.TabIndex = 9;
             portLabel.Text = "Port";
-            portLabel.Click += portLabel_Click;
             // 
             // utilisateurLabel
             // 
             utilisateurLabel.AutoSize = true;
-            utilisateurLabel.Location = new Point(6, 132);
+            utilisateurLabel.Location = new Point(6, 185);
             utilisateurLabel.Name = "utilisateurLabel";
             utilisateurLabel.Size = new Size(76, 20);
             utilisateurLabel.TabIndex = 10;
@@ -148,7 +151,7 @@
             // motdepasseLabel
             // 
             motdepasseLabel.AutoSize = true;
-            motdepasseLabel.Location = new Point(6, 185);
+            motdepasseLabel.Location = new Point(6, 238);
             motdepasseLabel.Name = "motdepasseLabel";
             motdepasseLabel.Size = new Size(98, 20);
             motdepasseLabel.TabIndex = 11;
@@ -170,20 +173,22 @@
             // 
             // utilisateurTextBox
             // 
-            utilisateurTextBox.Location = new Point(6, 155);
+            utilisateurTextBox.Location = new Point(6, 208);
             utilisateurTextBox.Name = "utilisateurTextBox";
             utilisateurTextBox.Size = new Size(125, 27);
             utilisateurTextBox.TabIndex = 14;
             // 
             // motdepasseTextBox
             // 
-            motdepasseTextBox.Location = new Point(6, 208);
+            motdepasseTextBox.Location = new Point(6, 261);
             motdepasseTextBox.Name = "motdepasseTextBox";
             motdepasseTextBox.Size = new Size(125, 27);
             motdepasseTextBox.TabIndex = 15;
             // 
             // dbGroupBox
             // 
+            dbGroupBox.Controls.Add(textBox1);
+            dbGroupBox.Controls.Add(baseDeDonneeTextBox);
             dbGroupBox.Controls.Add(connectionButton);
             dbGroupBox.Controls.Add(utilisateurLabel);
             dbGroupBox.Controls.Add(motdepasseTextBox);
@@ -208,6 +213,23 @@
             connectionButton.TabIndex = 16;
             connectionButton.Text = "Connection";
             connectionButton.UseVisualStyleBackColor = true;
+            connectionButton.Click += new System.EventHandler(connectionButton_Click);
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(6, 155);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 17;
+            // 
+            // baseDeDonneeTextBox
+            // 
+            baseDeDonneeTextBox.AutoSize = true;
+            baseDeDonneeTextBox.Location = new Point(6, 132);
+            baseDeDonneeTextBox.Name = "baseDeDonneeTextBox";
+            baseDeDonneeTextBox.Size = new Size(115, 20);
+            baseDeDonneeTextBox.TabIndex = 17;
+            baseDeDonneeTextBox.Text = "Base de donnee";
             // 
             // EcranDbDirect
             // 
@@ -251,5 +273,7 @@
         private TextBox motdepasseTextBox;
         private GroupBox dbGroupBox;
         private Button connectionButton;
+        private TextBox textBox1;
+        private Label baseDeDonneeTextBox;
     }
 }
