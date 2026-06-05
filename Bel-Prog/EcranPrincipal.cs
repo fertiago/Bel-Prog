@@ -67,7 +67,18 @@ namespace Bel_Prog
         {
             EcranDbDirect windows = new EcranDbDirect();
             windows.Show();
-        }    
+        }
 
+        private void integrationStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EcranIntegration windows = new EcranIntegration();
+            windows.Show();
+        }
+
+        private void malwareStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FicMalware windows = new FicMalware();
+            windows.Show();
+        }
     }
 }

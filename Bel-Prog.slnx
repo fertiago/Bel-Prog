@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="Bel-Prog/Bel-Prog.csproj" />
+  <Project Path="WindowsFormsControlLibrary/WindowsFormsControlLibrary.csproj" Id="97dbabea-76b5-485a-bc54-560cc5469245" />
 </Solution>
